@@ -1,0 +1,12 @@
+**/bin/
+**/obj/
+*.user
+.vs/
+**/node_modules/
+**/dist/
+appsettings.Production.json
+appsettings.Development.json
+.env
+.env.*
+!.env.example
+aura-dev.db*

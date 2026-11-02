@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: aura-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: Aura__Jwt__Key
+        generateValue: true
+      - key: ConnectionStrings__Default
+        sync: false
+      - key: Aura__Ai__ApiKey
+        sync: false
+      - key: Aura__FrontendUrl
+        sync: false
+      - key: Aura__CorsOrigins__0
+        sync: false
+      - key: Aura__RequireEmailConfirmation
+        value: "false"
+      - key: Aura__AdminEmail
+        sync: false
+      - key: Aura__AdminPassword
+        sync: false

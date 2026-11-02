@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body { @apply bg-[#050816] text-slate-100 font-sans; }
+@layer components {
+  .btn { @apply inline-block rounded-xl px-6 py-3 font-medium text-white bg-gradient-to-r from-blue-500 to-violet-500 shadow-[0_0_30px_rgba(99,102,255,.45)] hover:-translate-y-0.5 transition disabled:opacity-50; }
+  .btn-ghost { @apply inline-block rounded-xl px-6 py-3 font-medium border border-white/10 bg-white/5 hover:bg-white/10 transition disabled:opacity-50; }
+  .card { @apply rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur; }
+  .input { @apply w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 my-2 text-slate-100 outline-none focus:border-violet-400; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

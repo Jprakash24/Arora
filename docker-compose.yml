@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: aura
+      POSTGRES_PASSWORD: ${AURA_DB_PASSWORD:?Set AURA_DB_PASSWORD in the root .env file}
+      POSTGRES_DB: aura
+    ports: ["5432:5432"]
+    volumes: [aura_pg:/var/lib/postgresql/data]
+volumes:
+  aura_pg:
